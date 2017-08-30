@@ -1,0 +1,16 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4" ng-repeat="disList in tpList">
+            <div class="list-group">
+                <a href="#/detail" class="list-group-item" >
+                    <img class="img-responsive" ng-src="img/{{disList.img_sm}}">
+                    <h5>{{disList.name}}</h5>
+                    <p style="display: inline-block">{{disList.detail}}</p>
+                    <b style="font-size: 18px;column-rule: #dd2918;">{{disList.price | currency: '￥'}}</b>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>
